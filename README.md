@@ -1,5 +1,7 @@
 # S3DLaTeXRenderer
 
+![ScreenShot](images/ScreenShot.png)
+
 ## ThirdParty
 
 [cLaTeXMath](https://github.com/NanoMichael/cLaTeXMath)
