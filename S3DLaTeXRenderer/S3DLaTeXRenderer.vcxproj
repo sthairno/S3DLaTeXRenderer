@@ -73,6 +73,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <MinimalRebuild>false</MinimalRebuild>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)cLaTeXMath\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -96,6 +97,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)cLaTeXMath\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,75 +110,75 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="atom\atom_basic.cpp" />
-    <ClCompile Include="atom\atom_impl.cpp" />
-    <ClCompile Include="atom\box.cpp" />
-    <ClCompile Include="atom\colors_def.cpp" />
-    <ClCompile Include="core\core.cpp" />
-    <ClCompile Include="core\formula.cpp" />
-    <ClCompile Include="core\formula_def.cpp" />
-    <ClCompile Include="core\localized_num.cpp" />
-    <ClCompile Include="core\macro.cpp" />
-    <ClCompile Include="core\macro_def.cpp" />
-    <ClCompile Include="core\macro_impl.cpp" />
-    <ClCompile Include="core\parser.cpp" />
-    <ClCompile Include="fonts\alphabet.cpp" />
-    <ClCompile Include="fonts\fonts.cpp" />
-    <ClCompile Include="fonts\font_info.cpp" />
-    <ClCompile Include="latex.cpp" />
+    <ClCompile Include="cLaTeXMath\src\atom\atom_basic.cpp" />
+    <ClCompile Include="cLaTeXMath\src\atom\atom_impl.cpp" />
+    <ClCompile Include="cLaTeXMath\src\atom\box.cpp" />
+    <ClCompile Include="cLaTeXMath\src\atom\colors_def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\core.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\formula.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\formula_def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\localized_num.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\macro.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\macro_def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\macro_impl.cpp" />
+    <ClCompile Include="cLaTeXMath\src\core\parser.cpp" />
+    <ClCompile Include="cLaTeXMath\src\fonts\alphabet.cpp" />
+    <ClCompile Include="cLaTeXMath\src\fonts\fonts.cpp" />
+    <ClCompile Include="cLaTeXMath\src\fonts\font_basic.cpp" />
+    <ClCompile Include="cLaTeXMath\src\fonts\font_info.cpp" />
+    <ClCompile Include="cLaTeXMath\src\latex.cpp" />
+    <ClCompile Include="cLaTeXMath\src\render.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\builtin\formula_mappings.res.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\builtin\glue.res.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\builtin\symbol_mapping.res.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\builtin\tex_param.res.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\builtin\tex_symbols.res.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\bi10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\bx10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmbsy10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmbx10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmbxti10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmex10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmmi10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmmi10_unchanged.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmmib10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmmib10_unchanged.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmr10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmss10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmssbx10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmssi10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmsy10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmti10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmti10_unchanged.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\cmtt10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\dsrom10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\eufb10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\eufm10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\i10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\moustache.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\msam10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\msbm10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\r10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\r10_unchanged.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\rsfs10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\sb10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\sbi10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\si10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\special.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\ss10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\stmary10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\font\tt10.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\parser\font_parser.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\parser\formula_parser.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\reg\builtin_font_reg.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\reg\builtin_syms_reg.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\sym\amsfonts.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\sym\amssymb.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\sym\base.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\sym\special_s.def.cpp" />
+    <ClCompile Include="cLaTeXMath\src\res\sym\stmaryrd.def.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="render.cpp" />
-    <ClCompile Include="res\builtin\formula_mappings.res.cpp" />
-    <ClCompile Include="res\builtin\glue.res.cpp" />
-    <ClCompile Include="res\builtin\symbol_mapping.res.cpp" />
-    <ClCompile Include="res\builtin\tex_param.res.cpp" />
-    <ClCompile Include="res\builtin\tex_symbols.res.cpp" />
-    <ClCompile Include="res\font\bi10.def.cpp" />
-    <ClCompile Include="res\font\bx10.def.cpp" />
-    <ClCompile Include="res\font\cmbsy10.def.cpp" />
-    <ClCompile Include="res\font\cmbx10.def.cpp" />
-    <ClCompile Include="res\font\cmbxti10.def.cpp" />
-    <ClCompile Include="res\font\cmex10.def.cpp" />
-    <ClCompile Include="res\font\cmmi10.def.cpp" />
-    <ClCompile Include="res\font\cmmi10_unchanged.def.cpp" />
-    <ClCompile Include="res\font\cmmib10.def.cpp" />
-    <ClCompile Include="res\font\cmmib10_unchanged.def.cpp" />
-    <ClCompile Include="res\font\cmr10.def.cpp" />
-    <ClCompile Include="res\font\cmss10.def.cpp" />
-    <ClCompile Include="res\font\cmssbx10.def.cpp" />
-    <ClCompile Include="res\font\cmssi10.def.cpp" />
-    <ClCompile Include="res\font\cmsy10.def.cpp" />
-    <ClCompile Include="res\font\cmti10.def.cpp" />
-    <ClCompile Include="res\font\cmti10_unchanged.def.cpp" />
-    <ClCompile Include="res\font\cmtt10.def.cpp" />
-    <ClCompile Include="res\font\dsrom10.def.cpp" />
-    <ClCompile Include="res\font\eufb10.def.cpp" />
-    <ClCompile Include="res\font\eufm10.def.cpp" />
-    <ClCompile Include="res\font\i10.def.cpp" />
-    <ClCompile Include="res\font\moustache.def.cpp" />
-    <ClCompile Include="res\font\msam10.def.cpp" />
-    <ClCompile Include="res\font\msbm10.def.cpp" />
-    <ClCompile Include="res\font\r10.def.cpp" />
-    <ClCompile Include="res\font\r10_unchanged.def.cpp" />
-    <ClCompile Include="res\font\rsfs10.def.cpp" />
-    <ClCompile Include="res\font\sb10.def.cpp" />
-    <ClCompile Include="res\font\sbi10.def.cpp" />
-    <ClCompile Include="res\font\si10.def.cpp" />
-    <ClCompile Include="res\font\special.def.cpp" />
-    <ClCompile Include="res\font\ss10.def.cpp" />
-    <ClCompile Include="res\font\stmary10.def.cpp" />
-    <ClCompile Include="res\font\tt10.def.cpp" />
-    <ClCompile Include="res\parser\font_parser.cpp" />
-    <ClCompile Include="res\parser\formula_parser.cpp" />
-    <ClCompile Include="res\reg\builtin_font_reg.cpp" />
-    <ClCompile Include="res\reg\builtin_syms_reg.cpp" />
-    <ClCompile Include="res\sym\amsfonts.def.cpp" />
-    <ClCompile Include="res\sym\amssymb.def.cpp" />
-    <ClCompile Include="res\sym\base.def.cpp" />
-    <ClCompile Include="res\sym\special_s.def.cpp" />
-    <ClCompile Include="res\sym\stmaryrd.def.cpp" />
     <ClCompile Include="s3dLaTeX.cpp" />
-    <ClCompile Include="xml\tinyxml2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\engine\texture\box-shadow\128.png" />

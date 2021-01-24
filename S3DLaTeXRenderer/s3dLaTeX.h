@@ -4,7 +4,6 @@
 namespace tex
 {
 	class TeXFormula;
-	class TeXRenderBuilder;
 	class TeXRender;
 	class Graphics2D;
 }
@@ -36,8 +35,6 @@ namespace s3d
 	{
 	private:
 		std::shared_ptr<tex::TeXFormula> m_formula;
-
-		std::shared_ptr<tex::TeXRenderBuilder> m_builder;
 
 		std::shared_ptr<tex::TeXRender> m_render;
 

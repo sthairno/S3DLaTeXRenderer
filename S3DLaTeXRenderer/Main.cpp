@@ -1,5 +1,4 @@
 # include <Siv3D.hpp> // OpenSiv3D v0.4.3
-#define GRAPHICS_DEBUG
 #include"SasaGUI.hpp"
 #include"s3dLaTeX.h"
 
@@ -58,6 +57,18 @@ void Main()
 				else
 				{
 					gui.label(U"None");
+				}
+			}
+			gui.groupEnd(); gui.newLine();
+			gui.groupBegin(U"Size",true);
+			{
+				if (latex)
+				{
+					gui.label(Format(latex.getSize()));
+				}
+				else
+				{
+					gui.label(U"(---,---)");
 				}
 			}
 			gui.groupEnd();

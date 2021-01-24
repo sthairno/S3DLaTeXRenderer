@@ -190,12 +190,12 @@ namespace tex
 		}
 	};
 
-	Font* Font::create(const string& file, float size)
+	Font* Font::create(const std::string& file, float size)
 	{
 		return new TeXFont_Normal_impl(Unicode::Widen(file), size);
 	}
 
-	sptr<Font> Font::_create(const string& name, int style, float size)
+	sptr<Font> Font::_create(const std::string& name, int style, float size)
 	{
 		return std::make_shared<TeXFont_Normal_impl>(Unicode::Widen(name), style, size);
 	}
@@ -214,7 +214,7 @@ namespace tex
 		}
 	};
 
-	sptr<TextLayout> TextLayout::create(const wstring& src, const sptr<Font>& font) {
+	sptr<TextLayout> TextLayout::create(const std::wstring& src, const sptr<Font>& font) {
 		return std::make_shared<TextLayout_impl>();
 	}
 
@@ -341,7 +341,7 @@ namespace tex
 			drawText(str, x, y);
 		}
 
-		void drawText(const wstring& c, float x, float y) override
+		void drawText(const std::wstring& c, float x, float y) override
 		{
 			//Print << U"drawText(\"{}\",{},{})"_fmt(str, x, y);
 			{

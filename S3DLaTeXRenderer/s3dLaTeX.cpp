@@ -1,4 +1,6 @@
 #include "s3dLaTeX.h"
+#define GRAPHICS_DEBUG
+#define HAVE_LOG
 #include "texgraphic_s3d.hpp"
 #include "latex.h"
 #include "core/formula.h"
@@ -10,25 +12,26 @@ void s3d::Formatter(FormatData& formatData, const LaTeXAlign& value)
 
 void s3d::LaTeXRenderer::generateTeXRender()
 {
-	int align = ALIGN_LEFT;
+	tex::TeXRenderBuilder builder;
+	int align = tex::ALIGN_LEFT;
 	switch (Align)
 	{
 	case LaTeXAlign::Left:
-		align = ALIGN_LEFT;
+		align = tex::ALIGN_LEFT;
 		break;
 	case LaTeXAlign::Right:
-		align = ALIGN_RIGHT;
+		align = tex::ALIGN_RIGHT;
 		break;
 	case LaTeXAlign::Center:
-		align = ALIGN_CENTER;
+		align = tex::ALIGN_CENTER;
 		break;
 	}
-	m_render = std::shared_ptr<tex::TeXRender>(m_builder
-		->setStyle(STYLE_DISPLAY)
+	m_render = std::shared_ptr<tex::TeXRender>(builder
+		.setStyle(tex::STYLE_DISPLAY)
 		.setTextSize(TextSize)
-		.setWidth(UNIT_PIXEL, Width, align)
+		.setWidth(tex::UNIT_PIXEL, Width, align)
 		.setIsMaxWidth(Align == LaTeXAlign::Left)
-		.setLineSpace(UNIT_PIXEL, LineSpace)
+		.setLineSpace(tex::UNIT_PIXEL, LineSpace)
 		.setForeground(tex::argb((int)m_color.a, (int)m_color.r, (int)m_color.g, (int)m_color.b))
 		.build(*m_formula));
 }
@@ -36,7 +39,6 @@ void s3d::LaTeXRenderer::generateTeXRender()
 s3d::LaTeXRenderer::LaTeXRenderer()
 {
 	m_graphic = std::make_shared<tex::Graphics2D_s3d>();
-	m_builder = std::make_shared<tex::TeXRenderBuilder>();
 }
 
 s3d::LaTeXRenderer::LaTeXRenderer(const String& code)
@@ -112,7 +114,7 @@ bool s3d::LaTeXRenderer::isParsed() const
 
 void s3d::LaTeXRenderer::init()
 {
-	tex::LaTeX::init("example/cLaTeXMath/res");
+	tex::LaTeX::init("engine/cLaTeXMath/res");
 }
 
 void s3d::LaTeXRenderer::release()
